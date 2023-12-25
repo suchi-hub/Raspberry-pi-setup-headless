@@ -4,3 +4,6 @@ This is the procedure to install Ubuntu 20.04 on a Raspberry Pi 4B. First, downl
 
 To update the summary and include the usage of the nmap package to get the IP addresses of connected devices to the network, you can add the following information:
 To obtain the IP addresses of connected devices to the network, the nmap package can be used. By running a quick NMAP scan, network administrators can inventory network devices and monitor remote host status. For example, the command nmap ```sudo -sn 192.168.2.0/24``` can be used to perform a ping scan on the whole subnet range and retrieve the IP addresses of the connected devices. This command will ping all the IP addresses to see if they respond and provide a list of the hostname and IP address for each device that responds to the ping.This addition provides an overview of how the nmap package can be used to scan the network and obtain the IP addresses of connected devices.
+
+Refer to the pdf below for GPIO pin locations:
+https://datasheets.raspberrypi.com/rpi4/raspberry-pi-4-reduced-schematics.pdf
