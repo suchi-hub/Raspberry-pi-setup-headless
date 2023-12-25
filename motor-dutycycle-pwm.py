@@ -6,6 +6,9 @@ import time
 GPIO.setmode (GPIO.BCM)
 GPIO.setwarnings (False)
 
+# It seems like the classes are created from smaller components to larger systems.
+# Classes are created to represent actual physical system. Sometimes it can be created to a virtual state.
+# It can also be created to keep component specific data organized and use them easily when required.
 class Motor:
     def __init__ (self, pinFwd, pinBack, frequency=20, maxSpeed=100):
         #  Configure GPIO
@@ -36,6 +39,8 @@ class Motor:
             speed = -self._maxSpeed
 
         #  turn on the motors
+        # here the start method is used to specify the duty cycle of the pins out. 
+        # If no argument is passed to the start method, then it starts with the last set duty cycle.
         if speed < 0:
             self._pwmFwd.start(0)
             self._pwmBack.start(-speed)
@@ -43,6 +48,8 @@ class Motor:
             self._pwmFwd.start(speed)
             self._pwmBack.start(0)
 
+# here the Wheelie class is subclassing the Motor class directly.
+# This way the Wheelie class has 2 inherent objects every single time a Wheelie object is created.
 class Wheelie:
     def __init__ (self):
         self.rightWheel = Motor (10, 9)
