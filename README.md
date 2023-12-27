@@ -22,3 +22,8 @@ Some usefull commands
 `source /opt/ros/noetic/setup.bash`
 
 `sudo ufw disable`
+
+Environment Setup
+
+`echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc`
+`source ~/.bashrc`
