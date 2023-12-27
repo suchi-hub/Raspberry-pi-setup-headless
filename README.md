@@ -9,7 +9,8 @@ Refer to the pdf below for GPIO pin locations:
 https://datasheets.raspberrypi.com/rpi4/raspberry-pi-4-reduced-schematics.pdf
 
 Some usefull commands
-```export ROS_IP=192.168.2.12```
+
+`export ROS_IP=192.168.2.12
 export ROS_MASTER_URI=http://192.168.2.148:11311/
 
 rostopic pub /testtopic std_msgs/String -r 2 -- "Hello"
@@ -20,4 +21,4 @@ ssh ra-pi@192.168.2.148
 
 source /opt/ros/noetic/setup.bash
 
-sudo ufw disable
+sudo ufw disable`
